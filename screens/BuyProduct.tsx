@@ -49,8 +49,17 @@ export default function () {
         data={products}
         keyExtractor={(i_, i) => i.toString()}
         numColumns={2}
+        m="1"
+        showsVerticalScrollIndicator={false}
         renderItem={({ item }) => (
-          <Pressable w="48%" shadow="1" bg="white" m="1" onPress={() => navigation.navigate('DetailProduct' as never)}>
+          <Pressable
+            w="48%"
+            shadow="1"
+            m="1"
+            borderRadius="4"
+            bg="white"
+            onPress={() => navigation.navigate('DetailProduct' as never)}
+          >
             <Image source={item.image} resizeMode="cover" style={styles.imageCard} />
             <Box p="2">
               <Text fontSize="sm" fontFamily="Nunito-SemiBold">
@@ -74,5 +83,6 @@ const styles = StyleSheet.create({
   imageCard: {
     width: '100%',
     height: width / 2.5,
+    borderRadius: 4,
   },
 })

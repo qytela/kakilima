@@ -5,10 +5,11 @@ import { Box, Text, Pressable } from 'native-base'
 type TProps = {
   label: string
   image: JSX.Element
+  disabled?: boolean
   onPress?: any
 }
 
-export default memo(({ label, image, onPress }: TProps) => {
+export default memo(({ label, image, disabled, onPress }: TProps) => {
   return (
     <Pressable onPress={onPress} style={styles.productCard}>
       <Box
@@ -18,7 +19,7 @@ export default memo(({ label, image, onPress }: TProps) => {
         h="20"
         shadow="6"
         borderRadius="md"
-        bgColor="white"
+        bgColor={disabled ? 'gray.200' : 'white'}
       >
         {image}
       </Box>

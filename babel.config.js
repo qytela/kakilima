@@ -19,7 +19,20 @@ module.exports = function (api) {
         ],
       },
       production: {
-        plugins: ['react-native-paper/babel'],
+        plugins: [
+          'react-native-paper/babel',
+          [
+            'module-resolver',
+            {
+              alias: {
+                '@/screens': './screens',
+                '@/components': './components',
+                '@/assets': './assets',
+                '@/lib': './lib',
+              },
+            },
+          ],
+        ],
       },
     },
   }

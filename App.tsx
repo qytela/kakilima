@@ -19,6 +19,15 @@ import Home from '@/screens/Home'
 // Product
 import BuyProduct from '@/screens/BuyProduct'
 import DetailProduct from '@/screens/DetailProduct'
+import Shipping from '@/screens/Shipping'
+
+// Payment
+import PendingPayment from '@/screens/PendingPayment'
+import SuccessPayment from '@/screens/SuccessPayment'
+
+// Loan
+import Loan from '@/screens/Loan'
+import PendingLoan from '@/screens/PendingLoan'
 
 // etc
 import UnderContrusction from '@/screens/UnderContrusction'
@@ -157,6 +166,63 @@ export default function () {
             options={({ navigation }) => ({
               headerTitleAlign: 'center',
               headerTitle: 'Detail Produk',
+              headerTitleStyle: {
+                fontSize: 16,
+              },
+              headerLeft: () => (
+                <Ionicons name="chevron-back-outline" size={24} color="black" onPress={() => navigation.goBack()} />
+              ),
+            })}
+          />
+          <Stack.Screen
+            name="Shipping"
+            component={Shipping}
+            options={({ navigation }) => ({
+              headerTitleAlign: 'center',
+              headerTitle: 'Pengiriman',
+              headerTitleStyle: {
+                fontSize: 16,
+              },
+              headerLeft: () => (
+                <Ionicons name="chevron-back-outline" size={24} color="black" onPress={() => navigation.goBack()} />
+              ),
+            })}
+          />
+          <Stack.Screen
+            name="PendingPayment"
+            component={PendingPayment}
+            options={({ navigation }) => ({
+              headerTitleAlign: 'center',
+              headerTitle: 'Pembayaran',
+              headerTitleStyle: {
+                fontSize: 16,
+              },
+              headerLeft: () => (
+                <Ionicons name="chevron-back-outline" size={24} color="black" onPress={() => navigation.goBack()} />
+              ),
+            })}
+          />
+          <Stack.Screen
+            name="SuccessPayment"
+            component={SuccessPayment}
+            options={({ navigation }) => ({
+              headerTitleAlign: 'center',
+              headerTitle: 'Pembayaran Berhasil',
+              headerTitleStyle: {
+                fontSize: 16,
+              },
+              headerLeft: () => (
+                <Ionicons name="chevron-back-outline" size={24} color="black" onPress={() => navigation.goBack()} />
+              ),
+            })}
+          />
+          <Stack.Screen name="Loan" component={Loan} options={{ headerShown: false }} />
+          <Stack.Screen
+            name="PendingLoan"
+            component={PendingLoan}
+            options={({ navigation }) => ({
+              headerTitleAlign: 'center',
+              headerTitle: 'Pengajuan Pinjaman',
               headerTitleStyle: {
                 fontSize: 16,
               },

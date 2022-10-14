@@ -2,19 +2,22 @@ import { StyleSheet, Dimensions, Image } from 'react-native'
 import { Box, Text, ScrollView, VStack, Pressable, Divider } from 'native-base'
 import { Button } from 'react-native-paper'
 import { Ionicons } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native'
 
 import FocusAwareStatusBar from '@/components/FocusAwareStatusBar'
 
 const { width } = Dimensions.get('window')
 
 export default function () {
+  const navigation = useNavigation()
+
   return (
     <>
       <FocusAwareStatusBar barStyle="dark-content" backgroundColor="white" />
       <Box flex="1">
         <ScrollView w="full" h="full" bgColor="white" showsVerticalScrollIndicator={false}>
           <Image source={require('@/assets/images/Product1.png')} resizeMode="cover" style={styles.image} />
-          <Box p="2">
+          <Box p="4">
             <Text fontSize="lg" fontFamily="Nunito-SemiBold">
               Kecap ABC Manis
             </Text>
@@ -22,7 +25,7 @@ export default function () {
               Rp 4.000
             </Text>
 
-            <Divider mt="2" mb="2" />
+            <Divider mt="4" mb="4" />
 
             <VStack space="2">
               <Box>
@@ -70,7 +73,12 @@ export default function () {
           >
             <Ionicons name="cart-sharp" size={24} color="#EF4D2C" />
           </Pressable>
-          <Button mode="contained" color="#3A9B0B" onPress={() => {}} style={styles.footerButton}>
+          <Button
+            mode="contained"
+            color="#3A9B0B"
+            onPress={() => navigation.navigate('Shipping' as never)}
+            style={styles.footerButton}
+          >
             <Text fontSize="md" fontFamily="Nunito-Bold" color="white">
               BELI SEKARANG
             </Text>

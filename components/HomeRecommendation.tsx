@@ -14,12 +14,14 @@ export default memo(() => {
         <Box p="2">
           <Image
             source={require('@/assets/images/Recommendation1.png')}
+            resizeMode="cover"
             style={{ width: width / 1.185, borderRadius: 8 }}
           />
         </Box>
         <Box p="2">
           <Image
             source={require('@/assets/images/Recommendation1.png')}
+            resizeMode="cover"
             style={{ width: width / 1.185, borderRadius: 8 }}
           />
         </Box>

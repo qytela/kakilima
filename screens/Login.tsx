@@ -17,14 +17,12 @@ export default function () {
       [
         {
           label: 'No Handphone',
-          type: 'text',
           keyboardType: 'number-pad',
           onChangeText: (val: string) => setNoHandphone(val),
         },
         {
           label: 'Password',
           type: 'password',
-          keyboardType: 'default',
           hideShowPassword: true,
           onChangeText: (val: string) => setPassword(val),
         },
@@ -37,7 +35,11 @@ export default function () {
       <StatusBar barStyle="dark-content" backgroundColor="white" />
       <Box w="full" h="full" bgColor="white">
         <Box justifyContent="center" alignItems="center" p="4" mt="8">
-          <Image source={require('@/assets/images/KakiLimaSaja.png')} style={{ width: 120, height: 135 }} />
+          <Image
+            source={require('@/assets/images/KakiLimaSaja.png')}
+            resizeMode="cover"
+            style={{ width: 120, height: 135 }}
+          />
 
           <Box w="full" mt="8">
             <VStack space="12">
@@ -45,8 +47,8 @@ export default function () {
               <VStack space="2">
                 <Button
                   color="white"
-                  style={{ backgroundColor: '#3A9B0B' }}
                   onPress={() => navigation.navigate('HomeTab' as never)}
+                  style={{ backgroundColor: '#3A9B0B' }}
                 >
                   <Text fontSize="md" fontFamily="Nunito-Bold" color="white">
                     MASUK

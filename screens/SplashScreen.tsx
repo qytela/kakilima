@@ -16,6 +16,7 @@ export default function () {
       <Box w="full" h="full">
         <ImageBackground
           source={require('@/assets/images/SplashScreen.png')}
+          resizeMode="cover"
           style={{ flex: 1, justifyContent: 'center' }}
         />
       </Box>

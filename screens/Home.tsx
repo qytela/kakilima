@@ -29,14 +29,18 @@ export default function () {
             image={<BeliProdukSvg />}
             onPress={() => navigation.navigate('BuyProduct' as never)}
           />
-          <HomeProductCard label="Beli Pulsa" image={<BeliPulsaSvg />} />
-          <HomeProductCard label="Beli Token Listrik" image={<BeliTokenListrikSvg />} />
+          <HomeProductCard label="Beli Pulsa" image={<BeliPulsaSvg />} disabled />
+          <HomeProductCard label="Beli Token Listrik" image={<BeliTokenListrikSvg />} disabled />
         </Box>
 
         <Box flexDirection="row" justifyContent="space-around" alignItems="flex-start" mt="4">
-          <HomeProductCard label="Catatan Penjualan" image={<CatatanPenjualanSvg />} />
-          <HomeProductCard label="Pinjaman" image={<PinjamanSvg />} />
-          <HomeProductCard label="Lain-Lain" image={<LainLainSvg />} />
+          <HomeProductCard label="Catatan Penjualan" image={<CatatanPenjualanSvg />} disabled />
+          <HomeProductCard
+            label="Pinjaman"
+            image={<PinjamanSvg />}
+            onPress={() => navigation.navigate('Loan' as never)}
+          />
+          <HomeProductCard label="Lain-Lain" image={<LainLainSvg />} disabled />
         </Box>
 
         <Box mt="4">

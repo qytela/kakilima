@@ -24,10 +24,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.qytela.KakiLima"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b2550eef-eb63-4bdc-b958-f4b5d03ef5c1"
+      }
+    },
+    "jsEngine": "hermes"
   }
 }
