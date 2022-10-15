@@ -22,7 +22,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/android-icon-192x192.png",
+        "foregroundImage": "./assets/kakilima-icon.png",
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.qytela.KakiLima"
